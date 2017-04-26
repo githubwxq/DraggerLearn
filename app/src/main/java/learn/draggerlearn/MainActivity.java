@@ -14,6 +14,7 @@ import retrofit2.Retrofit;
 public class MainActivity extends AppCompatActivity {
     TextView text;
     private static final String TAG = "DaggerActivity";
+    //注入对象 不再是控件 控件butterkniife
     @Inject
     DaggerPresenter presenter;
 
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void inject() {
+        //retrofit在application中已经初始化   初始化必要的东西然后以后就直接用
         RetrofitAppComponent appComponent = ((MyApplication) getApplication()).getAppComponent(); //application中初始化好的一个
         DaggerActivityComponent.builder().retrofitAppComponent(appComponent).activityMoudle(new ActivityMoudle(this)).build().inject(this);
     }

@@ -11,6 +11,7 @@ import dagger.Component;
  * 需要修改一下ActivityComponent，
  * Error:(12, 1) 错误: learn.draggerlearn.ActivityComponent (unscoped) cannot depend on scoped components:
  @Singleton learn.draggerlearn.RetrofitAppComponent
+  *DaggerActivityComponent   Component 依赖后会怎么样  依赖了就得给他配好以来的对象 dependencies
  */
 @ActivityScope
 @Component(modules=ActivityMoudle.class,dependencies =RetrofitAppComponent.class)

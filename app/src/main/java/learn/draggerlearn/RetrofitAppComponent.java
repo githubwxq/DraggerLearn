@@ -16,10 +16,10 @@ import retrofit2.Retrofit;
 @Component(modules = {ApiModule.class})
 public interface RetrofitAppComponent {
 
-   OkHttpClient getClient();
+    OkHttpClient getClient();  //、、都不需要参数
 
-    Retrofit getRetrofit();
+    Retrofit getRetrofit();   //、、都不需要参数
 
-   User getUser();
+    User getUser();
     //这里的AppComponent提供了3个方法，分别用来暴露OkHttpClient、Retrofit和User对象的，这里暂且不提为什么要暴露，大家别急，继续往下看。
 }

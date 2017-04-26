@@ -11,7 +11,7 @@ import retrofit2.Retrofit;
 
 public class MyApplication extends Application {
 
-    RetrofitAppComponent appComponent;  //关于retrofit 的
+    RetrofitAppComponent appComponent;  //关于retrofit 的生命周期和他们一样
 //    OkHttpClient getClient();
 //
 //    Retrofit getRetrofit();
@@ -24,6 +24,8 @@ public class MyApplication extends Application {
                 .apiModule(new ApiModule())    // 可以传递参数
                 .build();
     }
+
+
 
     public RetrofitAppComponent getAppComponent() {
         return appComponent;

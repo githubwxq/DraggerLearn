@@ -34,7 +34,7 @@ public class ApiModule {
 }
 
 
-
+//提供的最后都得暴露出去给他人使用或者就是已经被注解自动生成的对象
     @Provides
     @Singleton
     User provideUser(){
